@@ -1,0 +1,14 @@
+:root {
+    --nav-padding: 15px 20px;
+    --m-top: 20px;
+}
+
+.navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--nav-padding);
+    margin-top: var(--m-top);
+}
+
+.mobile-menu {
+}
