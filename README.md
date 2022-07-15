@@ -14,5 +14,7 @@
 
 > Mission will be added through development in order to be extra-focused.
 
--   [ ] Auth pages & components + authentication & authorization
--   [ ] Site management pages – Add, Edit, Remove products and tags
+-   [x] Added functionality with API
+-   [x] Mobile-first workflow.
+-   [ ] Continue building components
+-   [ ] Establish responsiveness.
