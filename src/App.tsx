@@ -1,7 +1,14 @@
 import { useEffect, useState } from 'react';
-import { HeadBanner, DisplayURL, Input } from './components'
 import { readUrls } from './utils/crudFunctions'
 import { ShortenedURL } from './types/storeLink';
+
+import { HeadBanner } from './components/bigBanner'
+import MainLayout from './components/layout/MainLayout';
+import { Navbar, Footer } from './components/navigation'
+import { DisplayLinks, Input } from './components/links'
+import { AdvStats } from './components/advstats';
+
+import './App.css'
 
 function App() {
   const [urls, setUrls] = useState<ShortenedURL[] | null>([])
@@ -16,9 +23,14 @@ function App() {
 
   return (
     <>
+      <Navbar />
       <HeadBanner />
-      <Input refresh={refresh} />
-      {urls && <DisplayURL urls={urls} refresh={refresh} />}
+      <MainLayout>
+        <Input refresh={refresh} />
+        {urls! && <DisplayLinks urls={urls} refresh={refresh} />}
+        <AdvStats />
+      </MainLayout>
+      <Footer />
     </>
   );
 }

@@ -13,6 +13,7 @@ const SuccessModal: React.FC<Props> = ({ setter, msg }) => {
 
     return (
         <div className="modal modal-animation">
+            <div className='modal-icon'>✔️</div>
             <p className='success-modal'>{msg ? msg : 'Action completed successfuly!'}</p>
         </div>
     )

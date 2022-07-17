@@ -1,0 +1,58 @@
+:root {
+    --box-adv-radius: 8px;
+}
+
+.adv-stats-wrapper {
+    margin: 5em 0;
+    text-align: center;
+}
+
+.adv-stats-wrapper > h2 {
+    margin: 1em 0;
+}
+.adv-boxes {
+    display: flex;
+    flex-direction: column;
+}
+
+.adv-text-box {
+    background-color: white;
+    width: 100%;
+    padding: 80px 20px 20px;
+    margin: 2em 0;
+    border-radius: var(--box-adv-radius);
+    position: relative;
+    max-width: 350px;
+}
+
+.adv-text-box:not(:last-child)::after {
+    content: "";
+    display: block;
+    background-color: var(--cyan);
+    width: 8px;
+    height: 1.8em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.adv-img-box {
+    background-color: var(--very-dark-vio);
+    padding: 10px;
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -40px;
+}
+
+.adv-img-box > img {
+    width: 35px;
+}

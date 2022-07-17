@@ -25,7 +25,7 @@ const DisplayURL: React.FC<Props> = ({ urls, refresh }) => {
         setTimeout(() => {
             e.target.classList.remove('btn-copied')
             e.target.innerHTML = 'Copy'
-        }, 2000)
+        }, 4000)
     }
 
 

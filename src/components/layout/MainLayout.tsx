@@ -1,24 +1,17 @@
 import React from 'react'
-import Navbar from '../navigation/Navbar'
-import Footer from '../navigation/Footer'
 
 type Props = {
-    children: JSX.Element;
+    children: (JSX.Element | JSX.Element[]) | (React.ReactNode | React.ReactNode[]);
 }
 
 const MainLayout: React.FC<Props> = ({ children }) => {
+    console.log(children)
     return (
-        <>
-            <header>
-                <Navbar />
-            </header>
-            <main className='main-container'>
+        <main className='section-container'>
+            <section className='main-container'>
                 {children}
-            </main>
-            <footer>
-                <Footer />
-            </footer>
-        </>
+            </section>
+        </main>
     )
 }
 

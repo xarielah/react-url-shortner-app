@@ -21,12 +21,16 @@ body {
 
 :root {
   --gray: hsl(0, 0%, 75%);
+  --gray-light: #f0f1f6;
   --gray-vio: hsl(257, 7%, 63%);
   --very-dark: hsl(255, 11%, 22%);
   --very-dark-vio: hsl(260, 8%, 14%);
   --cyan: hsl(180, 66%, 49%);
   --dark-vio: hsl(257, 27%, 26%);
   --red: hsl(0, 87%, 67%);
+
+  --container-padding: 0 20px;
+  --container-maxw: 130ch;
 }
 
 a,
@@ -51,6 +55,13 @@ a:hover {
 
 .main-container {
   margin: 0 auto;
-  padding: 0 20px;
-  max-width: 130ch;
+  padding: var(--container-padding);
+  max-width: var(--container-padding);
+}
+
+hr {
+  height: 1px;
+  width: 100%;
+  background-color: #fafafa11;
+  margin: 10px 0;
 }

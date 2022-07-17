@@ -1,11 +1,14 @@
 :root {
-    --padding-modal: 30px 10px;
+    --padding-modal: 30px;
     --radius-modal: 13px;
     --box-shadow-modal: 0 5px 15px #00000033;
 }
 
 .modal {
     /* Modal styles only */
+    display: flex;
+    align-items: center;
+    gap: 15px;
     opacity: 1;
     position: fixed;
     bottom: 50px;
@@ -25,11 +28,16 @@
     /* transition: all 2s ease-in-out; */
 }
 
-.success-modal::before {
+.modal-icon {
+    height: 100%;
+}
+
+/* .success-modal::before {
+    height: 100%;
     content: "✔️";
     display: inline;
     margin: 0 10px;
-}
+} */
 
 @keyframes fadeInOut {
     0% {

@@ -20,7 +20,8 @@ const Navbar: React.FC = () => {
                 <Hamburger toggle={setOpen} toggled={isOpen} />
             </nav>
             <menu>
-                {isOpen && <ResponsiveMenu />}
+                {/* TODO: Add normal menu on desktop site */}
+                {isOpen && <ResponsiveMenu isOpen={isOpen} />}
             </menu>
         </>
     )

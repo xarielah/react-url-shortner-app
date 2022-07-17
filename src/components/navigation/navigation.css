@@ -1,6 +1,8 @@
 :root {
     --nav-padding: 15px 20px;
     --m-top: 20px;
+    --btn-margin: 1em 0;
+    --mobile-menu-radius: 12px;
 }
 
 .navigation-bar {
@@ -10,5 +12,63 @@
     margin-top: var(--m-top);
 }
 
+.footer-wrapper {
+    background-color: var(--very-dark-vio);
+    color: white;
+}
+
 .mobile-menu {
+    text-align: center;
+    margin: var(--container-padding);
+    background-color: var(--dark-vio);
+    color: white;
+    padding: 25px;
+    font-weight: bolder;
+    border-radius: var(--mobile-menu-radius);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    left: 0;
+    gap: 20px;
+    /* opacity: 0; */
+    transition: 1s all ease-in-out;
+}
+
+.o-1 {
+    animation: 400ms fadeIn;
+}
+
+.mobile-menu > ul {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+.mobile-menu-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.mobile-menu-item {
+    padding: 20px 0;
+}
+
+.menu-signup-btn {
+    padding: 10px 0;
+    border-radius: 100px;
+    margin: var(--btn-margin);
+}
+
+.menu-login-btn {
+    margin: var(--btn-margin);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
