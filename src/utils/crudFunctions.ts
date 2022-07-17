@@ -21,3 +21,7 @@ export function readUrls(): ShortenedURL[] | null {
     if (pastURLs == null) return null
     return JSON.parse(pastURLs)
 }
+
+export function clearData(): void {
+    localStorage.removeItem("data")
+}

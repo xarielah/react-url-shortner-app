@@ -1,0 +1,51 @@
+:root {
+    --padding-modal: 30px 10px;
+    --radius-modal: 13px;
+    --box-shadow-modal: 0 5px 15px #00000033;
+}
+
+.modal {
+    /* Modal styles only */
+    opacity: 1;
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    left: 0;
+    border-radius: var(--radius-modal);
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 500px;
+    padding: var(--padding-modal);
+    box-shadow: var(--box-shadow-modal);
+}
+
+.modal-animation {
+    animation: fadeInOut 3000ms;
+    /* transition: all 2s ease-in-out; */
+}
+
+.success-modal::before {
+    content: "✔️";
+    display: inline;
+    margin: 0 10px;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    25% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    75% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}

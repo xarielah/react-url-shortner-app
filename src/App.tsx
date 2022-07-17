@@ -15,11 +15,11 @@ function App() {
   const refresh = (): void => setRefreshValue(prev => !prev)
 
   return (
-    <section>
+    <>
       <HeadBanner />
       <Input refresh={refresh} />
-      {urls && <DisplayURL urls={urls} />}
-    </section>
+      {urls && <DisplayURL urls={urls} refresh={refresh} />}
+    </>
   );
 }
 

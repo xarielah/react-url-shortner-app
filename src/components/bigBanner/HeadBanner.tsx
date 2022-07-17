@@ -9,7 +9,7 @@ const HeadBanner: React.FC = () => {
                 <p className='main-desc'>
                     Build your brand's recognition and get detailed insights on how your links are performing.
                 </p>
-                <button className='btn btn-main'>Get Started</button>
+                <button className='btn btn-main'><a href="#url-input">Get Started</a></button>
             </div>
             <div className='main-section'>
                 <img src={mainpic} className="main-pic" alt="woman in chair" />

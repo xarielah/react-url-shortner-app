@@ -1,14 +1,26 @@
 :root {
-    --margin: 30px 20px;
+    --margin: 30px 0;
     --padding: 30px;
     --radius: 12px;
     --inputs-radius: 5px;
     --inputs-padding: 12.5px 0;
-    --displaymargin: 10px 20px;
+    --displaymargin: 10px 0;
     --displaypadding: 15px 20px;
+    --btn-clear-radius: 12px;
+    --btn-clear-padding: 10px 20px;
 }
 
 /* TODO: add bg image!! */
+
+.error-input-msg {
+    color: var(--red);
+    font-style: italic;
+}
+
+.error-input-field {
+    border: 3px solid var(--red) !important;
+    color: var(--red) !important;
+}
 
 .input-wrapper {
     display: flex;
@@ -66,4 +78,19 @@
 
 .btn-copied {
     background-color: var(--dark-vio) !important;
+}
+
+.display-clear-data {
+    color: var(--red);
+    border: 3px solid var(--red);
+    width: max-content;
+    margin: 0 auto;
+    padding: var(--btn-clear-padding);
+    border-radius: var(--btn-clear-radius);
+    cursor: pointer;
+}
+
+.display-clear-data:active {
+    background-color: var(--red);
+    color: white;
 }
