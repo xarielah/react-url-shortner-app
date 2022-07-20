@@ -8,7 +8,7 @@
 
 ## Pages
 
-> One-Page architecture.
+> One-Page structure.
 
 ## Next To-Do:
 
