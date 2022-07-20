@@ -13,7 +13,7 @@
 
 ## Next To-Do:
 
-> Mission will be added through development in order to be extra-focused.
+> Missions to complete the project.
 
 -   [x] Added functionality with API
 -   [x] Mobile-first workflow.
