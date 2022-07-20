@@ -16,5 +16,9 @@
 
 -   [x] Added functionality with API
 -   [x] Mobile-first workflow.
--   [ ] Continue building components
--   [ ] Establish responsiveness.
+-   [x] Completed components for all sections.
+-   [ ] Establish full-responsiveness.
+-   [x] CSS and JS-controlled animations and functionality.
+-   [x] User's input complete validation.
+-   [x] Handle displaying data.
+-   [ ] Completed adding content.
