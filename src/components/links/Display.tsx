@@ -11,10 +11,10 @@ type Props = {
 
 const DisplayURL: React.FC<Props> = ({ urls, refresh }) => {
     const [success, setSuccess] = useState<boolean>(false)
-    // TODO: Fix 'any' type on event
     const unsuccess = () => setSuccess(false)
 
     const copyToClipboard = (url: string, e: any) => {
+        // TODO: Fix 'any' type on event
         setSuccess(true)
 
         e.target.classList.add('btn-copied')
@@ -33,18 +33,16 @@ const DisplayURL: React.FC<Props> = ({ urls, refresh }) => {
         <>
             {success && <SuccessModal setter={unsuccess} msg={"Copied link successfuly to clipboard!"} />}
             <p className='display-clear-data' onClick={() => { clearData(); refresh() }}>Clear All Data</p>
-            {urls.map((url: ShortenedURL, index: number) =>
-                <div className='display-box' key={index}>
-                    <div className='display-original'><a href={url.original}>{url.original}</a></div>
-                    <hr />
-                    <div className='display-short'>
-                        <a href={url.shortened}>{url.shortened}</a>
-                        <div className='btn-container'>
-                            <button className='btn input-btn btn-copy' onClick={(e) => copyToClipboard(url.shortened, e)}>Copy</button>
-                        </div>
-                    </div>
+            {urls.map((url: ShortenedURL, index: number) => (
+                <div className='display-box'>
+                    <ul>
+                        <li><a href={url.original}>{url.original}</a></li>
+                        <hr />
+                        <li className='display-short'><a href={url.shortened}>{url.shortened}</a></li>
+                        <li><button className='btn input-btn btn-copy' onClick={(e) => copyToClipboard(url.shortened, e)}>Copy</button></li>
+                    </ul>
                 </div>
-            )}
+            ))}
         </>
     )
 }

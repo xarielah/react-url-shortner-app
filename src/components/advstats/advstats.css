@@ -3,8 +3,11 @@
 }
 
 .adv-stats-wrapper {
-    margin: 5em 0;
     text-align: center;
+}
+
+.adv-text-wrap {
+    margin: 5em 0 3em;
 }
 
 .adv-stats-wrapper > h2 {
@@ -13,6 +16,8 @@
 .adv-boxes {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .adv-text-box {
@@ -25,12 +30,11 @@
     max-width: 350px;
 }
 
-.adv-text-box:not(:last-child)::after {
-    content: "";
-    display: block;
+.linking-line {
+    width: 7px;
+    height: 50em;
+    margin: 50px 0;
     background-color: var(--cyan);
-    width: 8px;
-    height: 1.8em;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);

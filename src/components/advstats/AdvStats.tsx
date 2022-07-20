@@ -27,10 +27,16 @@ const BoxesData = [
 const AdvStats = () => {
     return (
         <article className='adv-stats-wrapper'>
-            <h2>Advanced Statistics</h2>
-            <p className='main-p'>Track how your links are performing across the web with out advanced statisics dashboard.</p>
+            <div className='adv-text-wrap'>
+                <h2>Advanced Statistics</h2>
+                <p className='main-p'>Track how your links are performing across the web with out advanced statisics dashboard.</p>
+            </div>
             <div className='adv-boxes'>
-                {BoxesData.map(data => <TextBox title={data.title} desc={data.desc} svg={data.svg} />)}
+                <div className='linking-line'></div>
+                {BoxesData.map((data, index: number) => (
+                    <TextBox key={index} title={data.title} desc={data.desc} svg={data.svg}
+                    />
+                ))}
             </div>
         </article>
     )

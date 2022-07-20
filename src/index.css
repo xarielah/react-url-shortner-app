@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
@@ -51,17 +55,27 @@ a:hover {
   border: none;
   color: white;
   cursor: pointer;
+  transition: 500ms all ease-in-out;
 }
 
 .main-container {
   margin: 0 auto;
   padding: var(--container-padding);
   max-width: var(--container-padding);
+  z-index: -10;
 }
 
 hr {
   height: 1px;
   width: 100%;
   background-color: #fafafa11;
-  margin: 10px 0;
+  margin: 5px 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
 }

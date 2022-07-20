@@ -5,7 +5,7 @@ import { ShortenedURL } from './types/storeLink';
 import { HeadBanner } from './components/bigBanner'
 import MainLayout from './components/layout/MainLayout';
 import { Navbar, Footer } from './components/navigation'
-import { DisplayLinks, Input } from './components/links'
+import { DisplayLinks, Input, BoostLinks } from './components/links'
 import { AdvStats } from './components/advstats';
 
 import './App.css'
@@ -30,6 +30,7 @@ function App() {
         {urls! && <DisplayLinks urls={urls} refresh={refresh} />}
         <AdvStats />
       </MainLayout>
+      <BoostLinks />
       <Footer />
     </>
   );

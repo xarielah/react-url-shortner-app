@@ -8,6 +8,7 @@
     --displaypadding: 15px 20px;
     --btn-clear-radius: 12px;
     --btn-clear-padding: 10px 20px;
+    --lipadding: 5px 15px;
 }
 
 /* TODO: add bg image!! */
@@ -25,6 +26,9 @@
 .input-wrapper {
     display: flex;
     flex-direction: column;
+    background-image: url("../../assets/images/bg-shorten-mobile.svg") !important;
+    background-repeat: no-repeat;
+    background-position-x: right;
     background-color: var(--dark-vio);
     padding: var(--padding);
     margin: var(--margin);
@@ -54,6 +58,18 @@
     background-color: white;
     border-radius: var(--inputs-radius);
     margin: var(--displaymargin);
+    padding: 17.5px 0;
+}
+
+.display-box > ul > li {
+    padding: var(--lipadding);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.display-box > ul > li > button {
+    margin: 0 !important;
 }
 
 .display-original {
@@ -62,7 +78,6 @@
 
 .display-short {
     color: var(--cyan);
-    padding: var(--displaypadding);
 }
 
 .btn-copy {
@@ -84,7 +99,7 @@
     color: var(--red);
     border: 3px solid var(--red);
     width: max-content;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: var(--btn-clear-padding);
     border-radius: var(--btn-clear-radius);
     cursor: pointer;
@@ -93,4 +108,23 @@
 .display-clear-data:active {
     background-color: var(--red);
     color: white;
+}
+
+.boost-link-box {
+    text-align: center;
+    padding: 20px;
+    height: 16.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--dark-vio);
+    background-image: url("../../assets/images/bg-boost-mobile.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.boost-link-box > a > button {
+    margin-bottom: 0 !important;
 }

@@ -21,6 +21,7 @@
     max-width: 500px;
     padding: var(--padding-modal);
     box-shadow: var(--box-shadow-modal);
+    z-index: 99;
 }
 
 .modal-animation {
@@ -31,13 +32,6 @@
 .modal-icon {
     height: 100%;
 }
-
-/* .success-modal::before {
-    height: 100%;
-    content: "✔️";
-    display: inline;
-    margin: 0 10px;
-} */
 
 @keyframes fadeInOut {
     0% {

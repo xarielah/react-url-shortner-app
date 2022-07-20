@@ -28,6 +28,9 @@ const InputURL: React.FC<Props> = ({ refresh }) => {
 
     const onsubmit = async (e: React.FormEvent) => {
         e.preventDefault()
+        if (link === '') {
+            return setValid([false, 'Please add link...'])
+        }
         if (valid[0]) {
             setIsSubmitting(true)
             const sanitizedValue = link.trim()
@@ -61,9 +64,7 @@ const InputURL: React.FC<Props> = ({ refresh }) => {
     return (
         <form onSubmit={onsubmit} id="url-input">
             {success && <SuccessModal setter={unsuccess} />}
-            <div className="input-wrapper" style={{
-                backgroundImage: 'url()'
-            }}>
+            <div className="input-wrapper">
                 <input ref={inputField} onChange={(e) => onchange(e)} placeholder='Shorten a link here...' className={`${valid[0] === false ? 'error-input-field' : ''} input-main`} />
                 {valid[0] === false && <p className="error-input-msg">{valid[1]}</p>}
                 <button disabled={isSubmitting} className='btn input-btn' type="submit">{isSubmitting ? 'Please wait...' : 'Shorten it!'}</button>

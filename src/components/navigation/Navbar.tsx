@@ -7,7 +7,7 @@ import useDimensions from '../../hooks/useWindowDimensions'
 
 const Navbar: React.FC = () => {
     const [isOpen, setOpen] = useState<boolean>(false)
-    const { width: winWidth, height: winHeight } = useDimensions()
+    const { width: winWidth } = useDimensions()
 
     useEffect(() => {
         if (winWidth >= 1000) return setOpen(false)
