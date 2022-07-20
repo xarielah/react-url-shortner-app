@@ -4,7 +4,8 @@
 
 ## Preview
 
-<sub>No images at the moment</sub>
+![Head + Body](https://i.imagesup.co/images2/8713ded75cb2199ce9d03db3374be1f72eeae19a.png)
+![Stats + Footer](https://i.imagesup.co/images2/12397fdc755f811c65e577b73020ab5b1ab23fd0.png)
 
 ## Pages
 
