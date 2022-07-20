@@ -4,8 +4,7 @@
     --radius: 12px;
     --inputs-radius: 5px;
     --inputs-padding: 12.5px 0;
-    --displaymargin: 10px 0;
-    --displaypadding: 15px 20px;
+    --displaymargin: 1.5em 0;
     --btn-clear-radius: 12px;
     --btn-clear-padding: 10px 20px;
     --lipadding: 5px 15px;
@@ -70,10 +69,6 @@
 
 .display-box > ul > li > button {
     margin: 0 !important;
-}
-
-.display-original {
-    padding: var(--displaypadding);
 }
 
 .display-short {

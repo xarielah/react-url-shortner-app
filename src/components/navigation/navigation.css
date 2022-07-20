@@ -12,13 +12,6 @@
     margin-top: var(--m-top);
 }
 
-.footer-wrapper {
-    background-color: var(--very-dark-vio);
-    color: white;
-    height: 100%;
-    padding: 60px;
-}
-
 .mobile-menu {
     text-align: center;
     margin: var(--container-padding);
@@ -73,4 +66,33 @@
     100% {
         opacity: 1;
     }
+}
+
+.footer-wrapper {
+    background-color: var(--very-dark-vio);
+    color: white;
+    height: 100%;
+    padding: 60px;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3em;
+}
+
+.link-wrap > h5 {
+    margin: 3em 0 2em;
+}
+
+.link-wrap > li {
+    font-size: 0.8em;
+    padding: 10px 0;
+    color: var(--gray-vio);
+}
+
+.footer-social-media {
+    display: flex;
+    justify-content: space-evenly;
 }
