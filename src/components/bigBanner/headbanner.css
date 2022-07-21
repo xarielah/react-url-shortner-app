@@ -39,11 +39,13 @@
 @media (min-width: 768px) {
     .main-banner {
         flex-direction: row;
+        max-width: var(--container-maxw-desktop);
     }
 
     .main-section {
         text-align: left;
         overflow-x: visible;
+        padding-left: 0;
     }
 
     .main-section > h1 {
@@ -52,7 +54,9 @@
     }
 
     .main-pic {
-        width: 100%;
+        width: 120%;
+        position: relative;
+        left: 3em;
     }
 
     .main-banner-p {
