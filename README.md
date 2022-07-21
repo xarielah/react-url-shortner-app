@@ -1,4 +1,4 @@
-# URL Shortner App
+# URL Shortening App
 
 > TypeScript-React based URL Shortner API – Please check this [Live Demo](https://react-url-shortner-app.vercel.app/)
 
