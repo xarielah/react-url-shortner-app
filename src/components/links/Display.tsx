@@ -2,7 +2,7 @@ import './inputdisplay.css'
 import { clearData } from '../../utils/crudFunctions'
 import { ShortenedURL } from '../../types/storeLink'
 import { Modal } from '../modal'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 type Props = {
     urls: ShortenedURL[];
@@ -13,18 +13,19 @@ const DisplayURL: React.FC<Props> = ({ urls, refresh }) => {
     const [success, setSuccess] = useState<boolean>(false)
     const unsuccess = () => setSuccess(false)
 
-    const copyToClipboard = (url: string, e: any) => {
-        // TODO: Fix 'any' type on event
+    const copyToClipboard = (url: string, e: React.MouseEvent<HTMLButtonElement>) => {
         setSuccess(true)
 
-        e.target.classList.add('btn-copied')
-        e.target.innerHTML = 'Copied!'
+        const event = e.target as HTMLButtonElement
+
+        event.classList.add('btn-copied')
+        event.innerHTML = 'Copied!'
 
         navigator.clipboard.writeText(url)
 
         setTimeout(() => {
-            e.target.classList.remove('btn-copied')
-            e.target.innerHTML = 'Copy'
+            event.classList.remove('btn-copied')
+            event.innerHTML = 'Copy'
         }, 4000)
     }
 

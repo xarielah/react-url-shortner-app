@@ -1,4 +1,14 @@
-module.exports = [
+type Links = {
+    title: string;
+    sublinks: {
+        title: string;
+        href: string;
+    }[]
+
+}[]
+
+
+const links: Links = [
     {
         title: 'Features',
         sublinks: [
@@ -51,3 +61,5 @@ module.exports = [
         ],
     },
 ]
+
+export default links
