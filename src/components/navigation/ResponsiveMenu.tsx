@@ -5,8 +5,6 @@ type Props = {
 }
 
 const ResponsiveMenu: React.FC<Props> = ({ isOpen }) => {
-
-    // TODO: Fix fadeout effect
     return (
         <div className={`mobile-menu ${isOpen ? 'o-1' : 'o-0'}`}>
             <ul>

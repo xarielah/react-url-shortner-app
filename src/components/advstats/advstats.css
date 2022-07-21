@@ -30,6 +30,10 @@
     max-width: 350px;
 }
 
+.adv-text-box > p {
+    font-size: 1rem;
+}
+
 .linking-line {
     width: 7px;
     height: 50em;
@@ -59,4 +63,32 @@
 
 .adv-img-box > img {
     width: 35px;
+}
+
+@media (min-width: 768px) {
+    .adv-boxes {
+        flex-direction: row;
+        padding: 5em 0 7em;
+        gap: 2em;
+    }
+
+    .linking-line {
+        height: 6px;
+        width: 50em;
+        max-width: 90%;
+    }
+
+    .adv-text-box:last-child {
+        position: relative;
+        top: 2em;
+    }
+
+    .adv-text-box:nth-of-type(2) {
+        position: relative;
+        top: -2em;
+    }
+
+    .adv-main-p {
+        text-align: left;
+    }
 }

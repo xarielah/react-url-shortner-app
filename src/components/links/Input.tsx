@@ -65,8 +65,10 @@ const InputURL: React.FC<Props> = ({ refresh }) => {
         <form onSubmit={onsubmit} id="url-input">
             {success && <SuccessModal setter={unsuccess} />}
             <div className="input-wrapper">
-                <input ref={inputField} onChange={(e) => onchange(e)} placeholder='Shorten a link here...' className={`${valid[0] === false ? 'error-input-field' : ''} input-main`} />
-                {valid[0] === false && <p className="error-input-msg">{valid[1]}</p>}
+                <div className='desktop-width-bundle'>
+                    <input ref={inputField} onChange={(e) => onchange(e)} placeholder='Shorten a link here...' className={`${valid[0] === false && 'error-input-field'} input-main`} />
+                    {valid[0] === false && <p className="error-input-msg">{valid[1]}</p>}
+                </div>
                 <button disabled={isSubmitting} className='btn input-btn' type="submit">{isSubmitting ? 'Please wait...' : 'Shorten it!'}</button>
             </div>
         </form >

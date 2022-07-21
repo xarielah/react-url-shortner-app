@@ -33,13 +33,15 @@ const DisplayURL: React.FC<Props> = ({ urls, refresh }) => {
         <>
             {success && <SuccessModal setter={unsuccess} msg={"Copied link successfuly to clipboard!"} />}
             <p className='display-clear-data' onClick={() => { clearData(); refresh() }}>Clear All Data</p>
-            {urls.map((url: ShortenedURL, index: number) => (
-                <div className='display-box'>
+            {urls.map((url: ShortenedURL, index) => (
+                <div className='display-box' key={index}>
                     <ul>
                         <li><a href={url.original}>{url.original}</a></li>
-                        <hr />
-                        <li className='display-short'><a href={url.shortened}>{url.shortened}</a></li>
-                        <li><button className='btn input-btn btn-copy' onClick={(e) => copyToClipboard(url.shortened, e)}>Copy</button></li>
+                        <hr className='hrule' />
+                        <div className='flex-dir-row display-bundle'>
+                            <li className='display-short'><a href={url.shortened}>{url.shortened}</a></li>
+                            <li><button className='btn input-btn btn-copy' onClick={(e) => copyToClipboard(url.shortened, e)}>Copy</button></li>
+                        </div>
                     </ul>
                 </div>
             ))}

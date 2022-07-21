@@ -6,7 +6,7 @@ const HeadBanner: React.FC = () => {
         <div className='main-banner'>
             <div className='main-section'>
                 <h1>More than just shorter links</h1>
-                <p className='main-p'>
+                <p className='main-p main-banner-p'>
                     Build your brand's recognition and get detailed insights on how your links are performing.
                 </p>
                 <button className='btn btn-main'><a href="#url-input">Get Started</a></button>

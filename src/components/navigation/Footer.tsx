@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
                 {links.map((item, index) => (
                     <ul className='link-wrap' key={index}>
                         <h5>{item.title}</h5>
-                        {item.sublinks.map(link => <li><a href={link.href}>{link.title}</a></li>)}
+                        {item.sublinks.map((link, idx) => <li key={idx}><a href={link.href}>{link.title}</a></li>)}
                     </ul>
                 ))}
             </div>

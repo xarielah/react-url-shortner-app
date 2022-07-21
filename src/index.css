@@ -29,11 +29,14 @@ body {
   --very-dark: hsl(255, 11%, 22%);
   --very-dark-vio: hsl(260, 8%, 14%);
   --cyan: hsl(180, 66%, 49%);
+  --cyan-light: hsl(180, 66%, 65%);
   --dark-vio: hsl(257, 27%, 26%);
   --red: hsl(0, 87%, 67%);
+  --red-light: hsl(0, 87%, 77%);
 
   --container-padding: 0 20px;
-  --container-maxw: 130ch;
+  --container-maxw: 120ch;
+  --container-maxw-desktop: 95ch;
 }
 
 a,
@@ -57,6 +60,11 @@ a:hover {
   transition: 500ms all ease-in-out;
 }
 
+.btn:active {
+  background-color: var(--cyan-light);
+  transition: 150ms all ease-in-out;
+}
+
 .main-container {
   margin: 0 auto;
   padding: var(--container-padding);
@@ -77,4 +85,10 @@ ul {
 
 li {
   list-style-type: none;
+}
+
+@media (min-width: 768px) {
+  .main-container {
+    margin-top: 5em;
+  }
 }

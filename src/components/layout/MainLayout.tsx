@@ -5,7 +5,6 @@ type Props = {
 }
 
 const MainLayout: React.FC<Props> = ({ children }) => {
-    console.log(children)
     return (
         <main className='section-container'>
             <section className='main-container'>

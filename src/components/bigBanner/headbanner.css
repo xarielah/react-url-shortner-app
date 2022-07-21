@@ -5,6 +5,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column-reverse;
+    max-width: var(--container-maxw);
+    overflow: visible;
 }
 
 .main-pic {
@@ -32,4 +34,28 @@
     padding: 15px 30px;
     border-radius: 100px;
     margin: 20px 0;
+}
+
+@media (min-width: 768px) {
+    .main-banner {
+        flex-direction: row;
+    }
+
+    .main-section {
+        text-align: left;
+        overflow-x: visible;
+    }
+
+    .main-section > h1 {
+        font-size: 3.5rem;
+        line-height: 1.15;
+    }
+
+    .main-pic {
+        width: 100%;
+    }
+
+    .main-banner-p {
+        padding: 0 !important;
+    }
 }
