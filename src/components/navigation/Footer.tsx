@@ -15,7 +15,6 @@ const Footer: React.FC = () => {
                 <img src={whiteLogo} alt="white company logo" />
             </div>
             <div className='footer-links'>
-                {/* TODO: 3 lists of links */}
                 {links.map((item, index) => (
                     <ul className='link-wrap' key={index}>
                         <h5>{item.title}</h5>

@@ -1,7 +1,7 @@
 import './inputdisplay.css'
 import { clearData } from '../../utils/crudFunctions'
 import { ShortenedURL } from '../../types/storeLink'
-import SuccessModal from '../modal/SuccessModal'
+import { Modal } from '../modal'
 import { useState } from 'react'
 
 type Props = {
@@ -31,7 +31,7 @@ const DisplayURL: React.FC<Props> = ({ urls, refresh }) => {
 
     return (
         <>
-            {success && <SuccessModal setter={unsuccess} msg={"Copied link successfuly to clipboard!"} />}
+            {success && <Modal setter={unsuccess} type="success" msg={"Copied link successfuly to clipboard!"} />}
             <p className='display-clear-data' onClick={() => { clearData(); refresh() }}>Clear All Data</p>
             {urls.map((url: ShortenedURL, index) => (
                 <div className='display-box' key={index}>

@@ -2,7 +2,8 @@ import './inputdisplay.css'
 import React, { useState, useRef, useMemo, useEffect } from 'react'
 import { fetchData } from '../../service/fetch'
 import { addNewURL } from '../../utils/crudFunctions'
-import SuccessModal from '../modal/SuccessModal'
+import { Modal } from '../modal'
+import { AxiosError } from 'axios'
 
 type Props = {
     refresh: () => void;
@@ -14,6 +15,7 @@ const InputURL: React.FC<Props> = ({ refresh }) => {
     const [link, setLink] = useState<string>('')
     const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
     const [success, setSuccess] = useState<boolean>(false)
+    const [err, setErr] = useState<InputValidation>([false, ''])
     const [valid, setValid] = useState<InputValidation | []>([null, ''])
     const inputField = useRef<HTMLInputElement>(null)
 
@@ -34,17 +36,17 @@ const InputURL: React.FC<Props> = ({ refresh }) => {
         if (valid[0]) {
             setIsSubmitting(true)
             const sanitizedValue = link.trim()
-            try {
-                const { original_link: original, full_short_link: shortened } = await fetchData(sanitizedValue).finally(() => setIsSubmitting(false))
-                addNewURL({ original, shortened })
-                if (!success) setSuccess(true)
-                setValid([null, ''])
-                setLink('')
-                inputField.current!.value = ''
-                refresh()
-            } catch (error) {
-                console.log(error)
-            }
+
+            await fetchData(sanitizedValue).finally(() => setIsSubmitting(false))
+                .then(({ original_link: original, full_short_link: shortened }) => {
+                    addNewURL({ original, shortened })
+                    if (!success) setSuccess(true)
+                    setValid([null, ''])
+                    setLink('')
+                    inputField.current!.value = ''
+                    refresh()
+                })
+                .catch(e => setErr([true, e.response.data.error]))
         }
     }
 
@@ -60,10 +62,12 @@ const InputURL: React.FC<Props> = ({ refresh }) => {
     }
 
     const unsuccess = (): void => setSuccess(false)
+    const unerr = (): void => setErr([false, ''])
 
     return (
         <form onSubmit={onsubmit} id="url-input">
-            {success && <SuccessModal setter={unsuccess} />}
+            {success && <Modal type="success" setter={unsuccess} />}
+            {err[0] && <Modal type="error" setter={unerr} msg={err[1]} />}
             <div className="input-wrapper">
                 <div className='desktop-width-bundle'>
                     <input ref={inputField} onChange={(e) => onchange(e)} placeholder='Shorten a link here...' className={`${valid[0] === false && 'error-input-field'} input-main`} />

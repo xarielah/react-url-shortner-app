@@ -24,8 +24,8 @@ const Navbar: React.FC = () => {
                     </ul>
                 </div>
                 <div className='login-signup-wrapper display-medium'>
-                    <a href="#">Login</a>
-                    <a href="#"><button className='btn btn-nav'>Sign Up</button></a>
+                    <a href="/">Login</a>
+                    <a href="/"><button className='btn btn-nav'>Sign Up</button></a>
                 </div>
                 <div className='menu-mobile'>
                     <Hamburger toggle={setOpen} toggled={isOpen} />

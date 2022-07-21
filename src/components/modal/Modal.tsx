@@ -3,9 +3,10 @@ import './modals.css'
 type Props = {
     setter(): void;
     msg?: string;
+    type: "success" | "error"
 }
 
-const SuccessModal: React.FC<Props> = ({ setter, msg }) => {
+const Modal: React.FC<Props> = ({ setter, msg, type }) => {
 
     setTimeout(() => {
         // This gets a setter function.
@@ -16,10 +17,10 @@ const SuccessModal: React.FC<Props> = ({ setter, msg }) => {
 
     return (
         <div className="modal modal-animation">
-            <div className='modal-icon'>✔️</div>
+            <div className='modal-icon'>{type === "success" ? '✔️' : '❌'}</div>
             <p className='success-modal'>{msg ? msg : 'Action completed successfuly!'}</p>
         </div>
     )
 }
 
-export default SuccessModal
+export default Modal
