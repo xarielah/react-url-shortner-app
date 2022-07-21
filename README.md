@@ -1,6 +1,29 @@
 # URL Shortner App
 
-> React-typescript based URL Shortner API.
+> TypeScript-React based URL Shortner API – Please check this [Live Demo](https://react-url-shortner-app.vercel.app/)
+
+## What I've Learned?
+
+  I learned to cope with real-world looking application and as well as laying out the design,
+  up to managing errors and make the application very interactable with the user. More to that, I learned to working with TypeScript and React and the libraries used in this project.
+
+- [x] React and other libraries using Intermediate TypeScript
+- [x] Implement and manage API responses.
+- [x] Folder and file managment for easy maintainance and team-work.
+- [x] Mobile-first work-flow.
+- [x] Create and solve interesting layouts and styles.
+- [x] Establish easy and beautiful desktop-mobile layouts.
+- [x] Problem solving for validations, styles, error-handling etc...
+
+## Built using
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+- [TypeScript](https://www.npmjs.com/package/typescript) - For better development experience
+- [React](https://reactjs.org/) - JS library
+- [Axios](https://www.npmjs.com/package/axios) - React framework
 
 ## Preview
 
@@ -26,3 +49,5 @@
 -   [x] Handle displaying data.
 -   [x] Completed adding content.
 -   [x] Minor Bug Fixes
+-   [x] Making Modal to be either success / error.
+-   [x] Catching API errors.
