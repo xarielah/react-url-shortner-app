@@ -1,12 +1,4 @@
-type Links = {
-    title: string;
-    sublinks: {
-        title: string;
-        href: string;
-    }[]
-
-}[]
-
+import Links from "../../types/footerLink" //   Do not remove type for links, follow the pattern.
 
 const links: Links = [
     {
